@@ -3,17 +3,19 @@ import styled from "styled-components"
 import { Link } from "gatsby"
 import Seo from "../components/Seo"
 
-const error = () => {
+const Error = () => {
   return (
-    <Wrapper className="page">
-      <Seo title="Error" />
-      <section>
-        <h1>oops it's a dead end</h1>
-        <Link to="/" className="btn">
-          back home
-        </Link>
-      </section>
-    </Wrapper>
+    <>
+      <Seo title="error" />
+      <Wrapper className="page">
+        <section>
+          <h1>oops it's a dead end</h1>
+          <Link to="/" className="btn">
+            back home
+          </Link>
+        </section>
+      </Wrapper>
+    </>
   )
 }
 
@@ -31,4 +33,4 @@ const Wrapper = styled.main`
   }
 `
 
-export default error
+export default Error

@@ -80,8 +80,8 @@ const Wrapper = styled.section`
     rgb(224, 236, 244) 47%,
     rgba(158, 188, 218, 1) 59%
   );
-  height: 90vh;
-  font-size: 5rem;
+  height: 70vh;
+  font-size: 6rem;
   text-transform: capitalize;
   font-family: nos;
   letter-spacing: 2px;
@@ -104,14 +104,23 @@ const Wrapper = styled.section`
   }
   img {
     width: 100%;
+    display: none;
+  }
+  article {
+    margin-top: 2rem;
   }
   @media (min-width: 768px) {
+    article {
+      margin-top: 0;
+    }
     height: 75vh;
     font-size: 5.8rem;
     h4 {
       font-size: 2.8rem;
     }
-
+    img {
+      display: block;
+    }
     section {
       display: flex;
       align-items: center;

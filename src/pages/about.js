@@ -12,7 +12,7 @@ const about = () => {
 
 const Wrapper = styled.section`
   text-align: center;
-  padding: 12rem 0 4rem;
+  padding: 7rem 0 4rem;
   .about-text {
     font-size: 3rem;
     .eng-text {

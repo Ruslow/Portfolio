@@ -15,8 +15,8 @@ const projects = () => {
 }
 const Wrapper = styled.section`
   text-align: center;
-  padding: 12rem 0 0;
-
+  padding: 7rem 0 4rem;
+  background-color: var(--secondary-color);
   @media (min-width: 768px) {
     padding: 5rem 0;
     h2,

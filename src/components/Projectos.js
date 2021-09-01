@@ -4,7 +4,7 @@ import image from "../assets/images/tilt.svg"
 import { useGlobalContext } from "./Context"
 import Projectscomp from "./Projectscomp"
 import { Link } from "gatsby"
-const Projects = () => {
+const Projectos = () => {
   const { lang } = useGlobalContext()
   return (
     <>
@@ -49,4 +49,4 @@ const Wrapper = styled.main`
     }
   }
 `
-export default Projects
+export default Projectos

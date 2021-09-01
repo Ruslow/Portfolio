@@ -1,21 +1,8 @@
-import React, { useEffect } from "react"
+import React from "react"
 import { useContext, useState } from "react"
-import { useStaticQuery, graphql } from "gatsby"
+
 const ContextP = React.createContext()
 const ContextProvider = ({ children }) => {
-  const data = useStaticQuery(graphql`
-    {
-      allContentfulLinks(sort: { fields: createdAt }) {
-        nodes {
-          node_locale
-          url
-          id
-          name
-        }
-      }
-    }
-  `)
-
   const [lang, setLang] = useState("en-US")
   const ruLang = () => {
     setLang(`ru`)

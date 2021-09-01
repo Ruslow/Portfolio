@@ -1,7 +1,7 @@
 import React from "react"
 import { StaticImage } from "gatsby-plugin-image"
 import { useGlobalContext } from "./Context"
-import Seo from "../components/Seo"
+import Seo from "./Seo"
 
 const Contact = () => {
   const { lang } = useGlobalContext()

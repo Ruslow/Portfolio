@@ -4,7 +4,7 @@ import styled from "styled-components"
 import image from "../assets/images/wavesOpacity.svg"
 import { StaticImage } from "gatsby-plugin-image"
 
-import Seo from "../components/Seo"
+import Seo from "./Seo"
 import { useStaticQuery, graphql } from "gatsby"
 import { useGlobalContext } from "./Context"
 import SocialIcons from "./Social-icons"

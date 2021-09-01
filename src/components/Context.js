@@ -1,6 +1,5 @@
 import React, { useEffect } from "react"
 import { useContext, useState } from "react"
-import Links from "./Links"
 import { useStaticQuery, graphql } from "gatsby"
 const ContextP = React.createContext()
 const ContextProvider = ({ children }) => {

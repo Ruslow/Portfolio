@@ -1,8 +1,6 @@
 import React from "react"
 import { useStaticQuery, graphql, Link } from "gatsby"
 import { useGlobalContext } from "./Context"
-import { useRef } from "react"
-import { useEffect } from "react"
 
 const Links = () => {
   const data = useStaticQuery(graphql`

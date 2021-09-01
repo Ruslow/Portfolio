@@ -1,14 +1,14 @@
-import React, { useEffect } from "react"
+import React from "react"
 import { StaticImage } from "gatsby-plugin-image"
 import { useGlobalContext } from "./Context"
-import SEO from "./SEO"
-import { useRef } from "react"
+import Seo from "./Seo"
+
 const About = () => {
   const { lang } = useGlobalContext()
 
   return (
     <>
-      <SEO
+      <Seo
         title={`${lang}` === "en-US" ? "About" : "О себе"}
         description={
           `${lang}` === "en-US"

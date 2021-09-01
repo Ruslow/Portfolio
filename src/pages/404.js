@@ -1,12 +1,12 @@
 import React from "react"
 import styled from "styled-components"
 import { Link } from "gatsby"
-import SEO from "../components/SEO"
+import Seo from "../components/Seo"
 
 const error = () => {
   return (
     <Wrapper className="page">
-      <SEO title="Error" />
+      <Seo title="Error" />
       <section>
         <h1>oops it's a dead end</h1>
         <Link to="/" className="btn">

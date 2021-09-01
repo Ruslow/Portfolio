@@ -3,7 +3,7 @@ import { Helmet } from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
 import { useGlobalContext } from "./Context"
 
-const SEO = ({ title, description }) => {
+const Seo = ({ title, description }) => {
   const data = useStaticQuery(graphql`
     {
       site {
@@ -15,7 +15,7 @@ const SEO = ({ title, description }) => {
     }
   `)
   const { site } = data
-  const { lang, tempTitle } = useGlobalContext()
+  const { lang } = useGlobalContext()
 
   const metaDescription = description || site.siteMetadata.description
   return (
@@ -27,4 +27,4 @@ const SEO = ({ title, description }) => {
   )
 }
 
-export default SEO
+export default Seo

@@ -1,9 +1,7 @@
 import React from "react"
 import styled from "styled-components"
-import { useGlobalContext } from "../components/Context"
 import Projectscomp from "../components/Projectscomp"
 import ProjectTitle from "../components/ProjectTitle"
-import SEO from "../components/SEO"
 
 const projects = () => {
   return (

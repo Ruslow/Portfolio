@@ -1,11 +1,11 @@
 import React from "react"
 import { useGlobalContext } from "./Context"
-import SEO from "./SEO"
+import Seo from "./Seo"
 const ProjectTitle = () => {
   const { lang } = useGlobalContext()
   return (
     <>
-      <SEO
+      <Seo
         title={`${lang}` === "en-US" ? "Projects" : "Проекты"}
         description={
           `${lang}` === "en-US"

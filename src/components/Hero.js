@@ -4,7 +4,7 @@ import styled from "styled-components"
 import image from "../assets/images/wavesOpacity.svg"
 import { StaticImage } from "gatsby-plugin-image"
 
-import SEO from "../components/SEO"
+import Seo from "../components/Seo"
 import { useStaticQuery, graphql } from "gatsby"
 import { useGlobalContext } from "./Context"
 import SocialIcons from "./Social-icons"
@@ -27,7 +27,7 @@ const Hero = () => {
   const { lang } = useGlobalContext()
   return (
     <>
-      <SEO
+      <Seo
         title={`${lang}` === "en-US" ? "Home" : "Главная"}
         description={
           `${lang}` === "en-US"
@@ -81,7 +81,7 @@ const Wrapper = styled.section`
     rgba(158, 188, 218, 1) 59%
   );
   height: 90vh;
-  font-size: 3.4rem;
+  font-size: 5rem;
   text-transform: capitalize;
   font-family: nos;
   letter-spacing: 2px;

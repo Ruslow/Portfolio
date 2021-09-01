@@ -1,13 +1,13 @@
 import React from "react"
 import { StaticImage } from "gatsby-plugin-image"
 import { useGlobalContext } from "./Context"
-import SEO from "../components/SEO"
+import Seo from "../components/Seo"
 
 const Contact = () => {
   const { lang } = useGlobalContext()
   return (
     <>
-      <SEO
+      <Seo
         title={`${lang}` === "en-US" ? "Contact me" : "Свяжитесь со мной"}
         description={
           `${lang}` === "en-US"

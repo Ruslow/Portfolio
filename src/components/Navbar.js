@@ -6,17 +6,16 @@ import { Link } from "gatsby"
 import { FiMenu } from "@react-icons/all-files/fi/FiMenu"
 import { useGlobalContext } from "./Context"
 import Language from "./Language"
-import { useEffect } from "react"
 
 const Navbar = () => {
-  const { openSidebar, lang } = useGlobalContext()
+  const { openSidebar } = useGlobalContext()
 
   return (
     <Wrapper>
       <div className="nav-center">
         <div className="nav-header">
           <Link to="/">
-            <img src={logo} alt="Rus Dev" />
+            <img className="logo" src={logo} alt="Rus Dev" />
           </Link>
           <FiMenu onClick={openSidebar} className="menu-icon" />
         </div>
@@ -69,8 +68,8 @@ const Wrapper = styled.nav`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    img {
-      width: 220px;
+    .logo {
+      width: 150px;
     }
     .menu-icon {
       font-size: 3.8rem;

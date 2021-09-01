@@ -23,7 +23,7 @@ const Cirtificates = () => {
   `)
 
   const cirtificates = data.allContentfulCirtificates.nodes
-  const half = cirtificates.length / 2
+
   return (
     <>
       <Wrapper>

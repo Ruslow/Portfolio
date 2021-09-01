@@ -1,7 +1,6 @@
 import React from "react"
 import styled from "styled-components"
 import About from "../components/About"
-import SEO from "../components/SEO"
 
 const about = () => {
   return (

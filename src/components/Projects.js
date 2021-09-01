@@ -28,7 +28,7 @@ const Wrapper = styled.main`
   background-color: var(--third-color);
   padding-bottom: 5rem;
   .flip {
-    transform: scale(-2, 2);
+    transform: scale(-1, 1);
   }
   text-align: center;
   margin-top: 3.4rem;

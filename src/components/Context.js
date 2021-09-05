@@ -2,8 +2,8 @@ import React from "react"
 import { useContext, useState, useEffect } from "react"
 
 const getStorageTheme = () => {
+  let theme = "light-theme"
   if (typeof window !== "undefined") {
-    let theme = "light-theme"
     if (localStorage.getItem("theme")) {
       theme = localStorage.getItem("theme")
     }

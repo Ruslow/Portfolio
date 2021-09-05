@@ -1,21 +1,27 @@
 import React from "react"
 import styled from "styled-components"
 import image from "../assets/images/tilt.svg"
+import image2 from "../assets/images/tilt copy.svg"
 import { useGlobalContext } from "./Context"
-import Projectscomp from "./Projectscomp"
+import Featured from "./Featured"
 import { Link } from "gatsby"
 const Projectos = () => {
-  const { lang } = useGlobalContext()
+  const { lang, theme, render } = useGlobalContext()
   return (
     <>
       <Wrapper>
-        <img className="flip" src={image} alt="" />
+        {render &&
+          (theme === "dark-theme" ? (
+            <img src={image} alt="" />
+          ) : (
+            <img src={image2} alt="" />
+          ))}
         <div className="section-center">
           <h2 className="title">
             {`${lang}` === "en-US" ? "Featured projects" : "Лучшие проекты"}
           </h2>
           <div className="underline"></div>
-          <Projectscomp />
+          <Featured />
           <Link className="btn" to="/projects">
             {`${lang}` === "en-US" ? "all projects" : "все проекты"}
           </Link>

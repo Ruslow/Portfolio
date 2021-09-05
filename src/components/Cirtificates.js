@@ -1,11 +1,12 @@
 import React from "react"
 import styled from "styled-components"
 import image from "../assets/images/tilt.svg"
+import image2 from "../assets/images/tilt copy.svg"
 import { GatsbyImage } from "gatsby-plugin-image"
 import { useGlobalContext } from "./Context"
 import { useStaticQuery, graphql } from "gatsby"
 const Cirtificates = () => {
-  const { lang } = useGlobalContext()
+  const { lang, theme, render } = useGlobalContext()
   const data = useStaticQuery(graphql`
     {
       allContentfulCirtificates(sort: { fields: title }) {
@@ -27,7 +28,9 @@ const Cirtificates = () => {
   return (
     <>
       <Wrapper>
-        <img src={image} alt="" />
+        {render && (
+          <img src={`${theme}` === "dark-theme" ? image : image2} alt="" />
+        )}
         <div className="section-center">
           <h2 className="title">
             {`${lang}` === "en-US" ? "Certificates" : "Сертификаты"}

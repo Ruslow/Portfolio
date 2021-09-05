@@ -56,7 +56,7 @@ const Wrapper = styled.ul`
   justify-content: center;
   a {
     margin-right: 1.8rem;
-    color: #222;
+    color: var(--text-col);
     font-size: 4rem;
     transition: color 0.4s ease-in-out;
 

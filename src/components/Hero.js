@@ -2,6 +2,7 @@ import { Link } from "gatsby"
 import React from "react"
 import styled from "styled-components"
 import image from "../assets/images/wavesOpacity.svg"
+import image2 from "../assets/images/wavesOpacity copy.svg"
 import { StaticImage } from "gatsby-plugin-image"
 
 import Seo from "./Seo"
@@ -24,7 +25,7 @@ const Hero = () => {
   `)
 
   const heroText = data.allContentfulHero.nodes
-  const { lang } = useGlobalContext()
+  const { lang, theme, render } = useGlobalContext()
   return (
     <>
       <Seo
@@ -65,9 +66,12 @@ I Want To Become A Web Developer`
             />
           </section>
         </Wrapper>
-        <div>
-          <img src={image} alt="" />
-        </div>
+        {render &&
+          (`${theme}` === "dark-theme" ? (
+            <img src={image} alt="" />
+          ) : (
+            <img src={image2}></img>
+          ))}
       </header>
     </>
   )
@@ -77,14 +81,14 @@ const Wrapper = styled.section`
   background: rgb(136, 86, 167);
   background: linear-gradient(
     180deg,
-    rgb(224, 236, 244) 47%,
-    rgba(158, 188, 218, 1) 59%
+    var(--third-color) 47%,
+    var(--secondary-color) 59%
   );
   height: 70vh;
   font-size: 6rem;
   text-transform: capitalize;
   font-family: nos;
-  letter-spacing: 2px;
+  letter-spacing: 3px;
   overflow: hidden;
   .btn {
     padding: 0.7rem 1rem;
@@ -92,7 +96,9 @@ const Wrapper = styled.section`
   }
 
   h4 {
-    font-size: 2.4rem;
+    font-size: 2rem;
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: 0;
   }
   section {
     padding-top: 13rem;
@@ -116,7 +122,7 @@ const Wrapper = styled.section`
     height: 75vh;
     font-size: 5.8rem;
     h4 {
-      font-size: 2.8rem;
+      font-size: 2.5rem;
     }
     img {
       display: block;
@@ -139,7 +145,7 @@ const Wrapper = styled.section`
   @media (min-width: 1000px) {
     font-size: 8rem;
     h4 {
-      font-size: 4rem;
+      font-size: 3rem;
     }
     section {
       .btn {

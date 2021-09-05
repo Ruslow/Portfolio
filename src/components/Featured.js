@@ -10,7 +10,7 @@ const Projectscomp = () => {
   const { lang } = useGlobalContext()
   const data = useStaticQuery(graphql`
     {
-      allContentfulProjects(sort: { fields: featured, order: DESC }) {
+      allContentfulProjects(filter: { featured: { eq: true } }) {
         nodes {
           name
           url

@@ -3,13 +3,21 @@ import "../assets/css/main.css"
 import Footer from "./Footer"
 import Navbar from "./Navbar"
 import Sidebar from "../components/Sidebar"
+import { useGlobalContext } from "./Context"
 const Layout = ({ children }) => {
+  const { render } = useGlobalContext()
   return (
     <>
-      <Navbar />
-      <Sidebar />
-      {children}
-      <Footer />
+      {!render ? (
+        <div className="preloader"></div>
+      ) : (
+        <>
+          <Navbar />
+          <Sidebar />
+          {children}
+          <Footer />
+        </>
+      )}
     </>
   )
 }

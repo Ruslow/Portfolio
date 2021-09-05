@@ -6,20 +6,24 @@ const Language = () => {
   return (
     <Wrapper
       onChange={e => {
-        if (e.target.value === "Ru") {
+        if (e.target.value === "Rus") {
           ruLang()
         }
         if (e.target.value === "Eng") {
+          enLang()
+        }
+        if (e.target.value === "Рус") {
+          ruLang()
+        }
+        if (e.target.value === "Англ") {
           enLang()
         }
       }}
       name="lang"
       id="lang"
     >
-      <option value="Eng">
-        {`${lang}` === "en-US" ? "Eng" : "Английский"}
-      </option>
-      <option value="Ru">{`${lang}` === "en-US" ? "Ru" : "Русский"}</option>
+      <option>{`${lang}` === "en-US" ? "Eng" : "Англ"}</option>
+      <option>{`${lang}` === "en-US" ? "Rus" : "Рус"}</option>
     </Wrapper>
   )
 }

@@ -5,12 +5,14 @@ import { FaTimes } from "@react-icons/all-files/fa/FaTimes"
 import styled from "styled-components"
 import { useGlobalContext } from "./Context"
 import Language from "./Language"
+import Theme from "./Theme"
 const Sidebar = () => {
   const { showSidebar, closeSidebar } = useGlobalContext()
   return (
     <Wrapper className={!showSidebar ? "close-sidebar" : null}>
       <div className="go">
         <Language />
+        <Theme />
         <FaTimes onClick={closeSidebar} className="close-btn" />
       </div>
       <div>
@@ -21,7 +23,7 @@ const Sidebar = () => {
   )
 }
 const Wrapper = styled.aside`
-  background-color: #dae2ec;
+  background-color: var(--sidebar-col);
   position: fixed;
   top: 0;
   left: 0;
@@ -32,6 +34,16 @@ const Wrapper = styled.aside`
   z-index: 100;
   text-align: center;
   transition: 0.3s linear;
+  .toggle-theme {
+    background: transparent;
+    outline: none;
+    border: none;
+    font-size: 3rem;
+    cursor: pointer;
+    .sun {
+      color: #f9d71c;
+    }
+  }
   .go {
     display: flex;
     align-items: center;

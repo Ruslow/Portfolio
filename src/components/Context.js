@@ -4,7 +4,9 @@ import { useContext, useState, useEffect } from "react"
 const getStorageTheme = () => {
   let theme = "light-theme"
   if (typeof window !== "undefined") {
-    theme = localStorage.getItem("theme")
+    if (localStorage.getItem("theme")) {
+      theme = localStorage.getItem("theme")
+    }
   }
   return theme
 }

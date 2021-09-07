@@ -93,6 +93,7 @@ const Wrapper = styled.section`
     }
     .footer {
       height: 40px;
+      text-transform: capitalize;
     }
   }
   .go {

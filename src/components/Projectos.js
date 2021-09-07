@@ -12,9 +12,9 @@ const Projectos = () => {
       <Wrapper>
         {render &&
           (theme === "dark-theme" ? (
-            <img src={image} alt="" />
+            <img src={image} alt="" className="flip" />
           ) : (
-            <img src={image2} alt="" />
+            <img src={image2} alt="" className="flip" />
           ))}
         <div className="section-center">
           <h2 className="title">

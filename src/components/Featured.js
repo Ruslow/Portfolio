@@ -83,6 +83,17 @@ const Projectscomp = () => {
 const Wrapper = styled.section`
   .card {
     position: relative;
+    height: 350px;
+    .img {
+      height: 190px;
+      object-fit: cover;
+    }
+    .mid {
+      height: 120px;
+    }
+    .footer {
+      height: 40px;
+    }
   }
   .go {
     position: absolute;

@@ -50,7 +50,7 @@ I Want To Become A Web Developer`
                   return (
                     <div>
                       <h1>{name}</h1>
-                      <h4>Freelance Web And Mobile UI/UX Designer</h4>
+                      <h4>{undername}</h4>
                       <Link to="/contact" className="btn">
                         {contact}
                       </Link>
